@@ -1,5 +1,5 @@
 import random 
-import test1_config as conf
+import config as conf
 URL=conf.URL
 URL2=conf.URL2
 ucharan_varg = conf.varg
@@ -26,7 +26,7 @@ def create_QB(number,f):
 		opts.append(ans)				# answer
 		random.shuffle(opts)
 
-		f.write("::MCQ Question::"+img(akshar)+" ध्वनि का उच्चारण स्थान क्या है ?"+audio(akshar)+" {")	
+		f.write("::MCQ Question::"+img(akshar)+" ध्वनि का उच्चारण स्थान क्या है ?(What is the pronunciation location of sound?)"+audio(akshar)+" {")	
 	
 		for i in range(len(opts)):
 			f.write("\n="+img(opts[i])+audio(opts[i]) if  ans == opts[i] else "\n~"+img(opts[i])+audio(opts[i]))
